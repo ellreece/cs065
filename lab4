@@ -1,0 +1,49 @@
+#Current Attempt
+def is_palindrome(str):
+    for i in range(len(str)):  #RESULTS IN ERROR for i in range(len(str)): TypeError: object of type 'int' has no len()
+        if str[i] != str[len(str)-i-1]:
+            return (False)
+    return print(str)
+
+
+import random
+def challenge1():
+    #Open file for reading
+    infile = open("dictionary.txt", "r")
+    
+    #Read all lines of input file into a list
+    word_list = infile.read().splitlines()
+
+    for x in range(len(word_list)):
+        is_palindrome(x)   #RESULTS IN ERROR. is_palindrome(x)
+        
+challenge1() # RESULTS IN ERROR challenge1()
+
+#Previous Attempt. #Has no errors, but is not correct
+import random
+def is_palindrome(s):
+    """
+    is_palindrome tests if the input string is a palindrome (word spelled the same
+    forward and backwards)
+    : param : str - string determining if a palindrome
+    : return : True - parameter is a palindrome
+               False - parameter is not a palindrome
+    """
+    for i in range(0, int(len(s)/2)):
+        if s[i] != s[len(s)-i-1]:
+            return False
+    return True
+
+is_palindrome("racecar")
+#Challenge 1
+def challenge1():
+    #Open File for Reading
+    infile = open("dictionary.txt", "r")
+    #Read All Lines of the Input File into a List
+    word_list = infile.read().splitlines()
+    print(word_list)
+    word = random.choice(word_list)
+    if is_palindrome(word) == True:
+        print(str)
+        
+challenge1()
